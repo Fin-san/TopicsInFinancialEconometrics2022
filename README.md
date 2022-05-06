@@ -15,5 +15,5 @@ In addition, to fitting the two models we introduce a Markov Regime Switching Mo
 Our data consists of 1000, delisted and currently listed, stocks from the CRSP Database between 2005 and 2015.
 
 
-We estiamte on a rolling basis, first we estimate and form pairs over a period of 5 years subsequently we trade over a period of 30 days. This process continues for 14 months.  
+We estimate on a rolling basis, first we estimate and form pairs over a period of 5 years subsequently we trade over a period of 30 days. This process continues for 14 months.  
 
