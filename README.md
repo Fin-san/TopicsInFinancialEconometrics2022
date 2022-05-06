@@ -17,3 +17,7 @@ Our data consists of 1000, delisted and currently listed, stocks from the CRSP D
 
 We estimate on a rolling basis, first we estimate and form pairs over a period of 5 years subsequently we trade over a period of 30 days. This process continues for 14 months.  
 
+![alt text](https://github.com/Fin-san/TopicsInFinancialEconometrics2022/blob/main/TradingStrategy_Baseline.png?raw=true)
+
+
+
