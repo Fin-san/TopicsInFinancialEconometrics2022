@@ -25,24 +25,6 @@ crsp_daily <- tbl(tidy_finance, 'crsp_daily') %>% collect() %>%
   dplyr::select(permno, date, ret_excess)
 crsp_monthly <- tbl(tidy_finance, 'crsp_monthly') %>% collect()
 crsp_d <- crsp_daily %>% filter(date > '2005-01-01'& date < '2015-01-01')
-{
-  
-crsp_m <- crsp_monthly %>% 
-  filter(date > '2005-10-01', date < '2008-01-01') %>%
-  dplyr::select(permno, industry)
-
-# Joining tables to add 'industry'
-crsp <- crsp_d %>%
-  left_join(crsp_m, by = "permno")
-
-# Dropping columns with NA values and sorting crsp by date 
-crsp <- crsp %>% distinct(permno, date, .keep_all = TRUE)
-
-# Checking correlation to find the largest correlation within industries
-corr_crsp <- crsp %>%
- group_by(industry) %>%
-  summarize(cor=cor(permno, ret_excess))
-}
 
 crsp_filtered <- crsp_d %>%
    #filter(industry %in% c('Public', "Construction", "Utilities")) %>%
@@ -136,7 +118,7 @@ named_pairs_with_cointegration <- apply(pairs_with_cointegration, 2, function(r)
 
   
   #FINDSENS PLAN B
- # pairs_df = data.frame(stocka=c('første'), stockb=c('anden'))
+ # pairs_df = data.frame(stocka=c('f?rste'), stockb=c('anden'))
   
 #  for (value in colnames(pairs_with_cointegration)) {
 #    
